@@ -134,7 +134,10 @@ def messageGen(prompt: str):
 
 models = [
     "phi4-mini:3.8b",
-    "qwen3:0.6b"
+    "qwen3:0.6b",
+    "qwen3:4b",
+    "qwen2.5:1.5b",
+    "lfm2:latest"
 ]
 
 # =========================
