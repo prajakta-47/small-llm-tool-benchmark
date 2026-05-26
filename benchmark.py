@@ -3,9 +3,8 @@ import json
 import ollama
 from ollama import chat
 
-# =========================
+ 
 # TOOL DEFINITIONS
-# =========================
 
 def get_machine_state(**kwargs):
     """Get current machine state"""
@@ -45,9 +44,8 @@ def get_population(location: str, **kwargs):
         "population": 100000
     })
 
-# =========================
-# AVAILABLE TOOLS
-# =========================
+
+# AVAILABLE TOOLS   
 
 available_tools = {
     "get_machine_state": get_machine_state,
@@ -57,9 +55,8 @@ available_tools = {
     "get_population": get_population
 }
 
-# =========================
 # PROMPTS
-# =========================
+ 
 
 ROLE = "user"
 
@@ -118,9 +115,9 @@ prompts = [
     P26, P27, P28, P29, P30
 ]
 
-# =========================
+ 
 # MESSAGE GENERATOR
-# =========================
+ 
 
 def messageGen(prompt: str):
     return {
@@ -128,22 +125,12 @@ def messageGen(prompt: str):
         "content": prompt
     }
 
-# =========================
+ 
 # MODEL LIST
-# =========================
-
 models = [
-    "phi4-mini:3.8b",
-    "qwen3:0.6b",
-    "qwen3:4b",
-    "qwen2.5:1.5b",
-    "lfm2:latest"
+    "qwen3:4b"
 ]
-
-# =========================
 # BENCHMARK LOOP
-# =========================
-
 for model_name in models:
 
     print("\n")
